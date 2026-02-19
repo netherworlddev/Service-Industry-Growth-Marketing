@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <style>
+        /* Global Shimmer & Animations */
+        .shimmer {
+            background: linear-gradient(to right, #2563eb 20%, #3b82f6 40%, #ffffff 50%, #3b82f6 60%, #2563eb 80%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 2s linear infinite;
+            display: inline-block;
+            position: relative;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+
+        body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        body.loaded { opacity: 1; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+
+    <div class="bg-white text-gray-900 py-2 px-6 hidden lg:flex justify-end items-center text-[10px] font-black tracking-widest relative z-50">
+        <div class="flex space-x-4 border-r border-gray-300 pr-4 mr-4 text-xs">
+            <a href="#"><i class="fab fa-tiktok hover:text-blue-600 transition"></i></a>
+            <a href="#"><i class="fab fa-instagram hover:text-blue-600 transition"></i></a>
+            <a href="#"><i class="fab fa-facebook hover:text-blue-600 transition"></i></a>
+        </div>
+        <div class="flex space-x-6 items-center uppercase">
+            <span><i class="fas fa-map-marker-alt text-blue-600 mr-1"></i>Dallas/Fort Worth</span>
+            <span><i class="fas fa-phone-alt text-blue-600 mr-1"></i>(817) 646-1242</span>
+            <span><i class="fas fa-envelope text-blue-600 mr-1"></i>TEAM@SIGMMARKETING.COM</span>
+        </div>
+    </div>
+
+    <nav class="bg-black/90 backdrop-blur-md sticky top-0 z-[100] border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-sm md:text-xl font-black tracking-tighter uppercase leading-none">
+                Service Industry<br class="md:hidden"> 
+                <span class="text-blue-600">Growth Marketing</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-[11px] tracking-[0.2em]">
+                <a href="index.html" class="hover:text-blue-500 transition">Home</a>
+                <a href="company.html" class="hover:text-blue-500 transition">Company</a>
+                <a href="solutions.html" class="hover:text-blue-500 transition">Solutions</a>
+                <a href="contact.html" class="text-blue-500">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-5">
+                <a href="tel:8176461242" class="lg:hidden text-blue-500 text-lg"><i class="fas fa-phone-alt"></i></a>
+                <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none"><i class="fas fa-bars text-white"></i></button>
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation'});return false;" class="hidden lg:block border-2 border-blue-600 px-6 py-2 rounded-lg font-bold uppercase text-[10px] hover:bg-blue-600 transition tracking-widest">Book A Call</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-black absolute w-full left-0 top-full border-b border-gray-800 animate-fade-in shadow-2xl">
+            <div class="flex flex-col p-8 space-y-6 text-center font-black uppercase tracking-widest text-sm">
+                <a href="index.html">Home</a>
+                <a href="company.html">Company</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="https://form.jotform.com/260494808170056" class="text-blue-500">Contact</a>
+                <hr class="border-gray-800">
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation'});return false;" class="bg-blue-600 text-white py-4 rounded-xl shadow-lg w-full uppercase font-black tracking-widest">Book A Call</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-[#f3f4f6] py-24 px-4 min-h-screen" style="background-image: radial-gradient(#d1d5db 1px, transparent 1px); background-size: 30px 30px;">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="lg:w-1/2">
+                <div class="inline-block">
+                    <span class="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded shadow-lg mb-6 inline-block transform -rotate-2">Direct Access</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] text-gray-900 mb-8">
+                    Let’s build your <br>
+                    <span class="shimmer">Custom Roadmap</span>
+                </h1>
+
+                <p class="text-gray-600 font-bold uppercase text-xs tracking-widest mb-8 italic">Choose a time that works for you. No pressure, just strategy.</p>
+                
+                <ul class="space-y-5 mb-12">
+                    <li class="flex items-center text-gray-800 font-bold text-sm md:text-base">
+                        <div class="bg-blue-600 text-white w-6 h-6 rounded flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </div>
+                        Market Analysis of your Service Area
+                    </li>
+                    <li class="flex items-center text-gray-800 font-bold text-sm md:text-base">
+                        <div class="bg-blue-600 text-white w-6 h-6 rounded flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </div>
+                        Competitor SEO & Ad Spend Audit
+                    </li>
+                    <li class="flex items-center text-gray-800 font-bold text-sm md:text-base">
+                        <div class="bg-blue-600 text-white w-6 h-6 rounded flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </div>
+                        180-Day Growth Guarantee Details
+                    </li>
+                </ul>
+
+                <div class="border-t-2 border-gray-200 pt-8">
+                    <h3 class="text-gray-900 font-black uppercase tracking-tighter text-xl mb-4">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-600 text-sm font-bold uppercase tracking-widest">
+                            <i class="fas fa-envelope text-blue-600 mr-2"></i> Team@sigmmarketing.com
+                        </p>
+                        <p class="text-gray-600 text-sm font-bold uppercase tracking-widest">
+                            <i class="fas fa-phone-alt text-blue-600 mr-2"></i> (817) 646-1242
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full">
+                <div class="bg-white rounded-[2rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden min-h-[700px] flex flex-col transition-transform hover:scale-[1.01]">
+                    <div class="p-8 border-b border-gray-50 flex items-center justify-between bg-white">
+                        <div>
+                            <h4 class="text-gray-900 font-black uppercase tracking-tight text-lg leading-tight">Growth Consultation</h4>
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1"><i class="far fa-clock mr-1"></i> 60 Mins • Strategy Session</p>
+                        </div>
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-200">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-grow p-2">
+                        <div class="calendly-inline-widget w-full h-full" 
+                             data-url="https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation?hide_event_types=1&hide_gdpr_banner=1" 
+                             style="min-width:320px;height:650px;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#1a1a1a] py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center">
+            <div class="text-xl font-black tracking-tighter mb-6 md:mb-0 uppercase">Service Industry <span class="text-blue-600">Growth Marketing</span></div>
+            <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">&copy; 2026 Service Industry Growth Marketing Co. All Rights Reserved.</div>
+            <div class="flex space-x-6 mt-6 md:mt-0 text-gray-400 text-xl">
+                <a href="#"><i class="fab fa-facebook-f hover:text-blue-600"></i></a>
+                <a href="#"><i class="fab fa-instagram hover:text-blue-600"></i></a>
+                <a href="#"><i class="fab fa-tiktok hover:text-blue-600"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('loaded');
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+    </script>
+</body>
+</html>

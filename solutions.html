@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions | Service Industry Growth Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <style>
+        .shimmer {
+            background: linear-gradient(to right, #2563eb 20%, #3b82f6 40%, #ffffff 50%, #3b82f6 60%, #2563eb 80%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 2s linear infinite;
+            display: inline-block;
+            position: relative;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+        .solution-card:hover { transform: translateY(-10px); border-color: #2563eb; }
+        
+        body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        body.loaded { opacity: 1; }
+
+        /* Timeline Connector Line */
+        .timeline-line {
+            background: linear-gradient(90deg, #2563eb var(--progress), #374151 var(--progress));
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+
+    <div class="bg-white text-gray-900 py-2 px-6 hidden lg:flex justify-end items-center text-[10px] font-black tracking-widest relative z-50">
+        <div class="flex space-x-6 items-center uppercase text-xs font-bold">
+            <span><i class="fas fa-map-marker-alt text-blue-600 mr-1"></i>Dallas/Fort Worth</span>
+            <span><i class="fas fa-phone-alt text-blue-600 mr-1"></i>(817) 646-1242</span>
+            <span><i class="fas fa-envelope text-blue-600 mr-1"></i>TEAM@SIGMMARKETING.COM</span>
+        </div>
+    </div>
+
+    <nav class="bg-black/90 backdrop-blur-md sticky top-0 z-[100] border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-sm md:text-xl font-black tracking-tighter uppercase leading-none hover:opacity-80 transition">
+                Service Industry<br class="md:hidden"> 
+                <span class="text-blue-600">Growth Marketing</span>
+            </a>
+            
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-[11px] tracking-[0.2em]">
+                <a href="index.html" class="hover:text-blue-500 transition">Home</a>
+                <a href="company.html" class="hover:text-blue-500 transition">Company</a>
+                <a href="solutions.html" class="text-blue-500 border-b-2 border-blue-600 pb-1">Solutions</a>
+                <a href="contact.html" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-5">
+                <a href="tel:8176461242" class="lg:hidden text-blue-500 text-lg"><i class="fas fa-phone-alt"></i></a>
+                <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none"><i class="fas fa-bars text-white"></i></button>
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation'});return false;" class="hidden lg:block border-2 border-blue-600 px-6 py-2 rounded-lg font-bold uppercase text-[10px] hover:bg-blue-600 transition tracking-widest">Book A Call</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-black border-b border-gray-800 animate-fade-in shadow-2xl">
+            <div class="flex flex-col p-8 space-y-6 text-center font-black uppercase tracking-widest text-sm">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="company.html" class="hover:text-blue-400">Company</a>
+                <a href="solutions.html" class="text-blue-500">Solutions</a>
+                <a href="contact.html" class="hover:text-blue-400">Contact</a>
+                <hr class="border-gray-800">
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation'});return false;" class="bg-blue-600 text-white py-4 rounded-xl shadow-lg uppercase font-black tracking-widest">Book A Call</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-24 px-4 bg-gray-900 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded shadow-lg mb-6 inline-block">Revenue Focused</span>
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6">
+                Our <span class="shimmer">Specialized</span> Solutions
+            </h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
+                We focus on high-converting infrastructure and local search dominance. No fluff, just results.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-[#f3f4f6]" style="background-image: radial-gradient(#d1d5db 1px, transparent 1px); background-size: 30px 30px;">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-gray-900 leading-none mb-4">THE ROADMAP TO <span class="text-blue-600">REVENUE</span></h2>
+            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-16">Click a step below to see our process</p>
+
+            <div class="relative mb-20 max-w-4xl mx-auto px-4">
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 -translate-y-1/2 rounded-full"></div>
+                <div id="timeline-progress" class="absolute top-1/2 left-0 h-1 bg-blue-600 -translate-y-1/2 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                
+                <div class="relative flex justify-between items-center">
+                    <button onclick="updateProcess(1, '0%')" class="step-node active w-12 h-12 rounded-full bg-white border-4 border-blue-600 z-10 font-black text-sm text-gray-900 shadow-xl transition-all hover:scale-110 flex items-center justify-center">1</button>
+                    <button onclick="updateProcess(2, '33%')" class="step-node w-12 h-12 rounded-full bg-white border-4 border-gray-300 z-10 font-black text-sm text-gray-900 shadow-xl transition-all hover:scale-110 flex items-center justify-center">2</button>
+                    <button onclick="updateProcess(3, '66%')" class="step-node w-12 h-12 rounded-full bg-white border-4 border-gray-300 z-10 font-black text-sm text-gray-900 shadow-xl transition-all hover:scale-110 flex items-center justify-center">3</button>
+                    <button onclick="updateProcess(4, '100%')" class="step-node w-12 h-12 rounded-full bg-white border-4 border-gray-300 z-10 font-black text-sm text-gray-900 shadow-xl transition-all hover:scale-110 flex items-center justify-center">4</button>
+                </div>
+            </div>
+
+            <div id="process-card" class="max-w-3xl mx-auto bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-gray-100 text-gray-900 min-h-[400px] flex flex-col justify-center animate-fade-in relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 text-[15rem] font-black text-blue-600/5 select-none" id="bg-num">1</div>
+                
+                <div class="relative z-10">
+                    <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-xs mb-4 block" id="step-label">Phase 01</span>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 leading-tight" id="step-title">The Kick-off Session</h3>
+                    <p class="text-gray-500 text-xl font-medium leading-relaxed mb-10" id="step-desc">
+                        We dive deep into your business goals, service capacity, and territory. We don't start until we have a crystal clear target of what success looks like for you.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4" id="step-features">
+                        <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"><i class="fas fa-check mr-2"></i>Goal Alignment</span>
+                        <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"><i class="fas fa-check mr-2"></i>Onboarding</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-section" class="py-24 px-6 bg-white text-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <div class="lg:w-1/2">
+                    <span class="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded shadow-lg mb-6 inline-block">Unrivaled Results</span>
+                    <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
+                        The Best in the <br><span class="text-blue-600">Service Game.</span>
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mr-6 group-hover:bg-blue-600 transition-colors">
+                                <i class="fas fa-trophy text-blue-600 group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black uppercase tracking-widest text-sm mb-2 text-gray-900">Service Industry Specialists</h4>
+                                <p class="text-gray-500 font-medium text-sm">We work with blue-collar pros. We know your margins and customers better than anyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full bg-gray-50 rounded-[3rem] p-4 shadow-inner border border-gray-200">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/serviceindustrygrowthmarketing/service-industry-growth-marketing-growth-consultation?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1a1a1a] py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center">
+            <div class="text-xl font-black tracking-tighter mb-6 md:mb-0 uppercase hover:text-blue-500 transition cursor-pointer" onclick="window.location.href='index.html'">Service Industry <span class="text-blue-600">Growth Marketing</span></div>
+            <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest text-xs">&copy; 2026 Service Industry Growth Marketing Co. All Rights Reserved.</div>
+            <div class="flex space-x-6 mt-6 md:mt-0 text-gray-400 text-xl">
+                <a href="#"><i class="fab fa-facebook-f hover:text-blue-600"></i></a>
+                <a href="#"><i class="fab fa-instagram hover:text-blue-600"></i></a>
+                <a href="#"><i class="fab fa-tiktok hover:text-blue-600"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('loaded');
+        });
+
+        const processData = {
+            1: {
+                label: "Phase 01",
+                title: "The Kick-off Session",
+                desc: "We dive deep into your business goals, service capacity, and territory. We don't start until we have a crystal clear target of what success looks like for you.",
+                features: ["Goal Alignment", "Deep Audit", "Strategy Build"]
+            },
+            2: {
+                label: "Phase 02",
+                title: "Market Analysis",
+                desc: "We dissect your local competitors and find exactly where they are leaving leads on the table. We build your custom roadmap based on hard local data.",
+                features: ["Competitor Intel", "Keyword Mapping", "Gap Analysis"]
+            },
+            3: {
+                label: "Phase 03",
+                title: "System Launch",
+                desc: "Our high-converting landing pages and local search engines go live. We start the engine and begin the lead generation process immediately.",
+                features: ["Speed to Lead", "SEO Activation", "Live Dashboards"]
+            },
+            4: {
+                label: "Phase 04",
+                title: "Full Dominance",
+                desc: "Constant optimization. We monitor your dashboards daily, scaling what works and ensuring you remain the #1 choice in your specific territory.",
+                features: ["ROI Scaling", "Ongoing SEO", "Weekly Updates"]
+            }
+        };
+
+        function updateProcess(step, width) {
+            // Update Progress Bar
+            document.getElementById('timeline-progress').style.width = width;
+
+            // Update Nodes Style
+            const nodes = document.querySelectorAll('.step-node');
+            nodes.forEach((node, index) => {
+                if (index + 1 <= step) {
+                    node.classList.add('border-blue-600', 'text-blue-600');
+                    node.classList.remove('border-gray-300');
+                } else {
+                    node.classList.remove('border-blue-600', 'text-blue-600');
+                    node.classList.add('border-gray-300');
+                }
+            });
+
+            // Animate Card Content
+            const card = document.getElementById('process-card');
+            card.classList.remove('animate-fade-in');
+            void card.offsetWidth; // Trigger reflow
+            card.classList.add('animate-fade-in');
+
+            // Update Text
+            const data = processData[step];
+            document.getElementById('step-label').innerText = data.label;
+            document.getElementById('step-title').innerText = data.title;
+            document.getElementById('step-desc').innerText = data.desc;
+            document.getElementById('bg-num').innerText = step;
+
+            // Update Features
+            const featuresDiv = document.getElementById('step-features');
+            featuresDiv.innerHTML = data.features.map(f => `
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                    <i class="fas fa-check mr-2"></i>${f}
+                </span>
+            `).join('');
+        }
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+    </script>
+</body>
+</html>
